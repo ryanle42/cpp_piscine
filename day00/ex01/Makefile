@@ -3,6 +3,8 @@ NAME = phonebook
 OBJS = $(addprefix ./, \
 					$(addsuffix .o, \
 							phonebook \
+							searchContacts \
+							addContact \
 							contact.class \
 						) \
 				)

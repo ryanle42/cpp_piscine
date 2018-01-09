@@ -1,7 +1,7 @@
 #ifndef CONTACT_CLASS_HPP
 # define CONTACT_CLASS_HPP
 
-#include <iostream>
+#include "phonebook.hpp"
 
 class Contact {
 

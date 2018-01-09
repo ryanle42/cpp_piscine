@@ -111,13 +111,38 @@ void	Account::_displayTimestamp( void ) {
   time_t t = std::time(0);
   struct tm * timeinfo = std::localtime(&t);
 
-  std::strftime(buffer, 80, "%G%m%d_%H%M%S", timeinfo);
-
-  std::cout << "[" << buffer << "] ";
+  std::strftime(buffer, 80, "[%Y%m%d_%H%M%S]", timeinfo);
+  std::cout << buffer << " ";
 }
-// 20150406_153629
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
+
+//
+
+//
+//
+//
+//
+//
+//
+//               ////                    ////
+//               ////                    ////
+//
+//
+//                          ////
+//                          ///
+//                          //
+//
+//
+//             ///                               ///
+//             ///                              ///
+//               ///                          ///
+//                 /////////////////////////////
+//
+//
+//
+//
+//

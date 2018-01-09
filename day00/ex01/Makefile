@@ -5,7 +5,7 @@ OBJS = $(addprefix ./, \
 							phonebook \
 							searchContacts \
 							addContact \
-							contact.class \
+							Contact.class \
 						) \
 				)
 

@@ -5,8 +5,9 @@ static void displayPrompt( int numberOfContacts ) {
   if (numberOfContacts <= 7) {
     std::cout << "ADD" << std::endl;
   }
-  std::cout << "SEARCH" << std::endl;
-  std::cout << "EXIT" << std::endl << std::endl;
+  std::cout << "SEARCH" << std::endl
+            << "EXIT" << std::endl 
+            << std::endl;
 }
 
 int main( void ) {
@@ -23,8 +24,8 @@ int main( void ) {
         numberOfContacts++;
       } else {
         std::cout << std::endl 
-        << "Contact List is at maximum capacity" 
-        << std::endl << std::endl;
+                  << "Contact List is at maximum capacity" 
+                  << std::endl << std::endl;
       }
     } else if (input == "SEARCH") {
       searchContacts(contactsList, numberOfContacts);

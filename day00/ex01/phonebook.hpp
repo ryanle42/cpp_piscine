@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include "contact.class.hpp"
+#include "Contact.class.hpp"
 
 void searchContacts(Contact contactsList[], int contactLength);
 void addContact( Contact contactsList[], int index );

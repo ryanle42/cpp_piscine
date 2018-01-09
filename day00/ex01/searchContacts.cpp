@@ -18,17 +18,29 @@ static void printColumn(std::string column) {
 
 static void printContactInfo(Contact contact) {
   std::cout << std::endl 
-  << "First Name: " << contact.getFirstName() << std::endl
-  << "Last Name: " << contact.getLastName() << std::endl
-  << "Nickname: " << contact.getNickName() << std::endl
-  << "Login: " << contact.getLogin() << std::endl
-  << "Postal Address: " << contact.getPostal() << std::endl
-  << "Email Address: " << contact.getEmail() << std::endl
-  << "Phone Number: " << contact.getPhoneNumber() << std::endl
-  << "Birthday: " << contact.getBirthday() << std::endl
-  << "Favorite Meal: " << contact.getFavMeal() << std::endl
-  << "Underwear Color: " << contact.getUnderwearColor() << std::endl
-  << "Darkest Secret: " << contact.getDarkestSecret() << std::endl << std::endl;
+            << "First Name: " << contact.getFirstName() 
+            << std::endl
+            << "Last Name: " << contact.getLastName() 
+            << std::endl
+            << "Nickname: " << contact.getNickName() 
+            << std::endl
+            << "Login: " << contact.getLogin() 
+            << std::endl
+            << "Postal Address: " << contact.getPostal() 
+            << std::endl
+            << "Email Address: " << contact.getEmail() 
+            << std::endl
+            << "Phone Number: " << contact.getPhoneNumber() 
+            << std::endl
+            << "Birthday: " << contact.getBirthday() 
+            << std::endl
+            << "Favorite Meal: " << contact.getFavMeal() 
+            << std::endl
+            << "Underwear Color: " << contact.getUnderwearColor() 
+            << std::endl
+            << "Darkest Secret: " << contact.getDarkestSecret() 
+            << std::endl 
+            << std::endl;
 }
 
 static void printTable(Contact contactsList[], int contactLength) {

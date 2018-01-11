@@ -18,7 +18,7 @@ Fixed::Fixed( int const n ) : _fixedPointVal(n) {
 } 
 
 Fixed::Fixed( float const n ) {
-  std::cout << "Floazt constructor called" << std::endl;
+  std::cout << "Float constructor called" << std::endl;
   this->_fixedPointVal = roundf(n * (1 << _bits));
   return ;
 }

@@ -1,4 +1,4 @@
-#include "Pony.class.hpp"
+#include "Pony.hpp"
 
 static void ponyOnTheHeap(void) {
   Pony *bob = new Pony("Bob", "Heap");

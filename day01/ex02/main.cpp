@@ -10,6 +10,9 @@ int main( void ) {
   zombie = zGenerator.newZombie("joe");
   zombie->announce();
   delete zombie;
+  zombie = zGenerator.newZombie("greg");
+  zombie->announce();
+  delete zombie;
   zGenerator.setZombieType("moist");
   zGenerator.randomChump();
 }

@@ -10,7 +10,8 @@ public:
   Brain( void );
   ~Brain( void );
   std::string identify( void ) const;
-
+  void thoughts( void ) const;
+ 
 };
 
 #endif

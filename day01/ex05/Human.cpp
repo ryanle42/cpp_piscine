@@ -7,7 +7,7 @@ Human::Human( void ) {
 }
 
 Human::~Human( void ) {
-  std::cout << "Human ded." << std::endl;
+  std::cout << "Human is ded." << std::endl;
   delete this->_brain;
   return ;
 }

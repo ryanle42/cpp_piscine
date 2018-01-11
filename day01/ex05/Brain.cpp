@@ -12,6 +12,11 @@ Brain::~Brain( void ) {
   return ;
 }
 
+void Brain::thoughts( void ) const {
+	std::cout << "Did I leave the garage door open?" << std::endl;
+	return ;
+}
+
 std::string Brain::identify( void ) const {
   const void *address = static_cast<const void *>(this);
   std::stringstream ss;

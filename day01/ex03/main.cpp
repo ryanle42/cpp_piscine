@@ -1,9 +1,7 @@
-#include "ZombieHoard.class.hpp"
-#include "Zombie.class.hpp"
+#include "ZombieHoard.hpp"
+#include "Zombie.hpp"
 
 int main( void ) {
   ZombieHoard hoard(3, "green");
   hoard.announce();
-
-
 }

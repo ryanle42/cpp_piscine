@@ -9,6 +9,7 @@
 class ZombieEvent {
 
 public:
+	
   ZombieEvent( void );
   ~ZombieEvent( void );
   void    setZombieType( std::string type );
@@ -16,8 +17,10 @@ public:
   void    randomChump( void ) const;
 
 private:
+
   static std::string _nameList[];
   std::string _type;
+
 };
 
 #endif

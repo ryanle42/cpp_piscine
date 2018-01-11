@@ -12,13 +12,13 @@ ZombieEvent::~ZombieEvent( void ) {
   return ;
 }
 
-void ZombieEvent::setZombieType(std::string type) {
+void ZombieEvent::setZombieType( std::string type ) {
   std::cout << "Setting zombie type to " << type << std::endl;
   this->_type = type;
   return ;
 }
 
-Zombie *ZombieEvent::newZombie(std::string name) const{
+Zombie *ZombieEvent::newZombie( std::string name ) const {
   Zombie *zombie = new Zombie;
   zombie->setName(name);
   zombie->setType(this->_type);

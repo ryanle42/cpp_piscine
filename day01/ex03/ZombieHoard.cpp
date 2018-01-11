@@ -1,15 +1,15 @@
 #include "ZombieHoard.hpp"
 #include "Zombie.hpp"
 
-ZombieHoard::ZombieHoard( int n, std::string type ) : _type(type) {
+ZombieHoard::ZombieHoard( int N, std::string type ) : _type(type) {
   std::srand(std::time(0));
-  std::cout << "A Zombie hoard appears" << std::endl;
-  Zombie *hoard = new Zombie[n];
-  for (int i = 0; i < n; i++) {
+  std::cout << "A " << type << " Zombie hoard appears" << std::endl;
+  Zombie *hoard = new Zombie[N];
+  for (int i = 0; i < N; i++) {
     hoard[i].setName(this->_nameList[rand() % 15]);
     hoard[i].setType(type);
   }
-  this->_nbZombies = n;
+  this->_nbZombies = N;
   this->_hoard = hoard;
   return ;
 }

@@ -10,7 +10,7 @@ class FragTrap : public ClapTrap {
   
 public:
 
-  FragTrap( std::string name );
+  FragTrap( std::string const & name );
   FragTrap( FragTrap const & src );
   ~FragTrap( void );
   FragTrap & operator=( FragTrap const & rhs );

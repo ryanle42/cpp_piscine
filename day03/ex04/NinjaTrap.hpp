@@ -12,7 +12,7 @@ class NinjaTrap : virtual public ClapTrap {
   
 public:
 
-  NinjaTrap( std::string name );
+  NinjaTrap( std::string const & name );
   NinjaTrap( NinjaTrap const & src );
   ~NinjaTrap( void );
   NinjaTrap & operator=( NinjaTrap const & rhs );

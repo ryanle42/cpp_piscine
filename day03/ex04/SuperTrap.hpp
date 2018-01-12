@@ -10,7 +10,7 @@ class SuperTrap :
   
 public:
 
-  SuperTrap( std::string name );
+  SuperTrap( std::string const & name );
   SuperTrap( SuperTrap const & src );
   ~SuperTrap( void );
   SuperTrap & operator=( SuperTrap const & rhs );

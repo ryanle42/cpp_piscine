@@ -1,6 +1,6 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap( std::string name ) : _name(name) {
+ClapTrap::ClapTrap( std::string const & name ) : _name(name) {
   std::srand(std::time(0));
   
   this->_type = "CL4P-TP";
@@ -9,7 +9,7 @@ ClapTrap::ClapTrap( std::string name ) : _name(name) {
   return ;
 }
 
-ClapTrap::ClapTrap( std::string name, std::string type ) 
+ClapTrap::ClapTrap( std::string const & name, std::string const & type ) 
   : _name(name), _type(type) {
   std::srand(std::time(0));
 

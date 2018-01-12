@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap( std::string name ) 
+FragTrap::FragTrap( std::string const & name ) 
   : ClapTrap(name, "FR4G-TP") {
   std::srand(std::time(0));
 

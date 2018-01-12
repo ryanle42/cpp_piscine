@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap( std::string name ) 
+ScavTrap::ScavTrap( std::string const & name ) 
   : ClapTrap(name, "SC4V-TP") {
   std::srand(std::time(0));
 

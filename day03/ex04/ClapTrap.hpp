@@ -9,8 +9,8 @@ class ClapTrap {
   
 public:
 
-  ClapTrap( std::string name );
-  ClapTrap( std::string name, std::string type );
+  ClapTrap( std::string const & name );
+  ClapTrap( std::string const & name, std::string const & type );
   ClapTrap( ClapTrap const & src );
   ~ClapTrap( void );
   ClapTrap & operator=( ClapTrap const & rhs );

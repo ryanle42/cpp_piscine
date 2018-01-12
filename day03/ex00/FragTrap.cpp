@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap( std::string name ) : _name(name) {
+FragTrap::FragTrap( std::string const & name ) : _name(name) {
   std::srand(std::time(0));
 
   this->_HP = 100;

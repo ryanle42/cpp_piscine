@@ -7,7 +7,7 @@ class Victim {
 
 public:
 
-  Victim( std::string name );
+  Victim( std::string const & name );
   Victim( Victim const & src );
   ~Victim( void );
   Victim & operator=( Victim const & rhs );

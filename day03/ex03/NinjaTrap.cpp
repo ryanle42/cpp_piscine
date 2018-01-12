@@ -1,6 +1,6 @@
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap( std::string name ) 
+NinjaTrap::NinjaTrap( std::string const & name ) 
   : ClapTrap(name, "N1NJ4-TP") {
   std::srand(std::time(0));
 

@@ -8,7 +8,7 @@ class Peon : public Victim {
 
 public:
 
-  Peon( std::string name );
+  Peon( std::string const & name );
   Peon( Peon const & src );
   ~Peon( void );
   void getPolymorphed( void ) const;

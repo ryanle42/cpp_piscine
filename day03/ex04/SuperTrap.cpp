@@ -1,11 +1,11 @@
 #include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap( std::string name ) 
+SuperTrap::SuperTrap( std::string const & name ) 
   : ClapTrap(name),
   FragTrap(name),
   NinjaTrap(name) {
   std::srand(std::time(0));
-  // std::cout << "HP: " << this->ClapTrap::_HP << std::endl;
+
   this->_HP = 100;
   this->_maxHP = 100;
   this->_EP = 120;

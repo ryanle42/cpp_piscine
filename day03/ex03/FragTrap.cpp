@@ -1,6 +1,7 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap( std::string name ) : _name(name) {
+FragTrap::FragTrap( std::string name ) 
+  : ClapTrap(name, "FR4G-TP") {
   std::srand(std::time(0));
 
   this->_HP = 100;
@@ -11,14 +12,14 @@ FragTrap::FragTrap( std::string name ) : _name(name) {
   this->_meleeDmg = 30;
   this->_rangeDmg = 20;
   this->_armor = 5;
-  this->_type = "FR4G-TP";
 
   this->announce();
   std::cout << " spawns." << std::endl;
   return ;
 }
 
-FragTrap::FragTrap( FragTrap const & src ) {
+FragTrap::FragTrap( FragTrap const & src ) 
+  : ClapTrap(src) {
   *this = src;
   return ;
 }
@@ -42,50 +43,6 @@ FragTrap & FragTrap::operator=( FragTrap const & rhs ) {
   return *this;
 }
 
-std::string FragTrap::getName( void ) const {
-  return this->_name;
-}
-
-void FragTrap::meleeAttack( std::string const & target ) const {
-  this->announce();
-  std::cout << " melee attacks " << target 
-            << " causing " << this->_meleeDmg 
-            << " points of damage !" << std::endl;
-  return ;
-}
-
-void FragTrap::rangedAttack( std::string const & target ) const {
-  this->announce();
-  std::cout << " attacks " << target 
-            << " at range, causing " << this->_rangeDmg 
-            << " points of damage !" << std::endl;
-  return ;
-}
-
-void FragTrap::takeDamage( unsigned int amount ) {
-  if (amount > this->_armor) {
-    amount -= this->_armor;
-    this->_HP -= amount;
-  } else {
-    amount = 0;
-  }
-  this->announce();
-  std::cout << " takes " << amount << " damage !" 
-            << std::endl;
-  return ;
-}
-
-void FragTrap::beRepaired( unsigned int amount ) {
-  this->_HP += amount;
-  if (this->_HP > this->_maxHP) {
-    this->_HP = this->_maxHP;
-  }
-  this->announce();
-  std::cout << " heals for " << amount << " points."
-            << std::endl;
-  return ;
-}
-
 void FragTrap::vaulthunter_dot_exe(std::string const & target) {
   int n = rand() % 5;
 
@@ -105,12 +62,6 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target) {
     }
     std::cout << " !" << std::endl;
   }
-  return ;
-}
-
-void FragTrap::announce( void ) const {
-  std::cout << this->_type << " " << this->_name;
-  return ;
 }
 
 std::string FragTrap::_attacks[5] = {

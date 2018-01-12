@@ -76,8 +76,9 @@ Fixed & Fixed::operator++( void ) {
 }
 
 Fixed Fixed::operator++( int n ) {
+  n = 1;
   Fixed before(this->toFloat());
-  this->_fixedPointVal *= (1 << 1);
+  this->_fixedPointVal *= (n << n);
   return before;
 }
 
@@ -87,8 +88,9 @@ Fixed & Fixed::operator--( void ) {
 }
 
 Fixed Fixed::operator--( int n ) {
+  n = 1;
   Fixed before(this->toFloat());
-  this->_fixedPointVal *= (1 << 1);
+  this->_fixedPointVal *= (n << n);
   return before;
 }
 

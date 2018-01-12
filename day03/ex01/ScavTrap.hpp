@@ -22,6 +22,8 @@ public:
   void announce( void ) const;
 
 private:
+
+  ScavTrap( void );
   static std::string _attacks[];
   std::string _name;
   std::string _type;

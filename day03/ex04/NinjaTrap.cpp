@@ -12,6 +12,7 @@ NinjaTrap::NinjaTrap( std::string name )
   this->_meleeDmg = 60;
   this->_rangeDmg = 5;
   this->_armor = 0;
+  this->_type = "N1NJ4-TP";
 
   this->announce();
   std::cout << " spawns." << std::endl;
@@ -29,6 +30,7 @@ NinjaTrap::NinjaTrap( void ) {
 }
 
 NinjaTrap::~NinjaTrap( void ) {
+  this->_type = "N1NJ4-TP";
   this->announce();
   std::cout << " dies." << std::endl;
 }
@@ -74,5 +76,3 @@ void NinjaTrap::ninjaShoebox( ScavTrap & target ) {
   target.announce();
   std::cout << std::endl; 
 }
-
-

@@ -18,6 +18,7 @@ public:
 
 private:
 
+  ScavTrap( void );
   static std::string _attacks[];
 
 };

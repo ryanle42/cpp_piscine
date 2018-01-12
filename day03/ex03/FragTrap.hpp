@@ -18,6 +18,7 @@ public:
 
 private:
 
+  FragTrap( void );
   static std::string _attacks[];
 
 };

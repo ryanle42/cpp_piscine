@@ -23,6 +23,10 @@ FragTrap::FragTrap( FragTrap const & src ) {
   return ;
 }
 
+FragTrap::FragTrap( void ) {
+  return ;
+}
+
 FragTrap::~FragTrap( void ) {
   this->announce();
   std::cout << " dies." << std::endl;
@@ -63,14 +67,21 @@ void FragTrap::rangedAttack( std::string const & target ) const {
 }
 
 void FragTrap::takeDamage( unsigned int amount ) {
+  int damage;
+
   if (amount > this->_armor) {
     amount -= this->_armor;
     this->_HP -= amount;
+    damage = amount;
+    if (this->_HP < 0) {
+      damage = amount + this->_HP;
+      this->_HP = 0;
+    }
   } else {
-    amount = 0;
+    damage = 0;
   }
   this->announce();
-  std::cout << " takes " << amount << " damage !" 
+  std::cout << " takes " << damage << " damage !" 
             << std::endl;
   return ;
 }

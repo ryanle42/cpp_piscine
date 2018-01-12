@@ -22,6 +22,10 @@ ScavTrap::ScavTrap( ScavTrap const & src ) {
   return ;
 }
 
+ScavTrap::ScavTrap( void ) {
+  return ;
+}
+
 ScavTrap::~ScavTrap( void ) {
   this->announce();
   std::cout << " dies." << std::endl;
@@ -62,14 +66,21 @@ void ScavTrap::rangedAttack( std::string const & target ) const {
 }
 
 void ScavTrap::takeDamage( unsigned int amount ) {
+  int damage;
+
   if (amount > this->_armor) {
     amount -= this->_armor;
     this->_HP -= amount;
+    damage = amount;
+    if (this->_HP < 0) {
+      damage = amount + this->_HP;
+      this->_HP = 0;
+    }
   } else {
-    amount = 0;
+    damage = 0;
   }
   this->announce();
-  std::cout << " takes " << amount << " damage !" 
+  std::cout << " takes " << damage << " damage !" 
             << std::endl;
   return ;
 }

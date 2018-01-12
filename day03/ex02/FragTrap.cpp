@@ -24,6 +24,10 @@ FragTrap::FragTrap( FragTrap const & src )
   return ;
 }
 
+FragTrap::FragTrap( void ) {
+  return ;
+}
+
 FragTrap::~FragTrap( void ) {
   this->announce();
   std::cout << " dies." << std::endl;

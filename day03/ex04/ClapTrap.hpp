@@ -20,8 +20,9 @@ public:
   void takeDamage( unsigned int amount );
   void beRepaired( unsigned int amount );
   void announce( void ) const;
+  int getHP( void ) const;
 
-protected:
+public:
 
   std::string _name;
   std::string _type;

@@ -23,6 +23,7 @@ public:
 
 private:
 
+  FragTrap( void );
   static std::string _attacks[];
   std::string _name;
   std::string _type;

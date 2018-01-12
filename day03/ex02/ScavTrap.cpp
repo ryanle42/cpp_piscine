@@ -24,6 +24,10 @@ ScavTrap::ScavTrap( ScavTrap const & src )
   return ;
 }
 
+ScavTrap::ScavTrap( void ) {
+  return ;
+}
+
 ScavTrap::~ScavTrap( void ) {
   this->announce();
   std::cout << " dies." << std::endl;

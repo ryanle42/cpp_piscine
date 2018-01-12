@@ -34,6 +34,10 @@ protected:
   int _rangeDmg;
   unsigned int _armor;
 
+private:
+
+  ClapTrap( void );
+
 };
 
 #endif

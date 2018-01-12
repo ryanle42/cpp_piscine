@@ -23,6 +23,10 @@ ClapTrap::ClapTrap( ClapTrap const & src ) {
   return ;
 }
 
+ClapTrap::ClapTrap( void ) {
+  return ;
+}
+
 ClapTrap::~ClapTrap( void ) {
   std::cout << "CL4P-TP " << this->_name;
   std::cout << " dies." 
@@ -60,14 +64,21 @@ void ClapTrap::rangedAttack( std::string const & target ) const {
 }
 
 void ClapTrap::takeDamage( unsigned int amount ) {
+  int damage;
+
   if (amount > this->_armor) {
     amount -= this->_armor;
     this->_HP -= amount;
+    damage = amount;
+    if (this->_HP < 0) {
+      damage = amount + this->_HP;
+      this->_HP = 0;
+    }
   } else {
-    amount = 0;
+    damage = 0;
   }
   this->announce();
-  std::cout << " takes " << amount << " damage !" 
+  std::cout << " takes " << damage << " damage !" 
             << std::endl;
   return ;
 }

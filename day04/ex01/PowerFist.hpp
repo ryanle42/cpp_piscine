@@ -2,6 +2,7 @@
 # define POWERFIST_HPP
 
 #include "AWeapon.hpp"
+#include <iostream>
 
 class PowerFist : public AWeapon {
 

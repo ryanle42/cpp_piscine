@@ -1,38 +1,38 @@
 #include "AWeapon.hpp"
 
-AWeapon( std::string const & name, int apcost, int damage ) 
+AWeapon::AWeapon( std::string const & name, int apcost, int damage ) 
   : _name(name), _apCost(apcost), _damage(damage) {
     return ;
 }
 
-AWeapon( AWeapon const & src ) {
+AWeapon::AWeapon( AWeapon const & src ) {
   *this = src;
   return ;
 }
 
-AWeapon( void ) {
+AWeapon::AWeapon( void ) {
   return ;
 }
 
-~AWeapon( void ) {
+AWeapon::~AWeapon( void ) {
   return ;
 }
 
-AWeapon & operator=( AWeapon const & rhs ) {
+AWeapon & AWeapon::operator=( AWeapon const & rhs ) {
   this->_name = rhs._name;
   this->_apCost = rhs._apCost;
   this->_damage = rhs._damage;
   return *this;
 }
 
-std::string getName() const {
+std::string AWeapon::getName() const {
   return this->_name;
 }
 
-int getAPCost() const {
+int AWeapon::getAPCost() const {
   return this->_apCost;
 }
 
-int getDamage() const {
+int AWeapon::getDamage() const {
   return this->_damage;
 }

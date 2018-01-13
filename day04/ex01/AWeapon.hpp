@@ -1,6 +1,8 @@
 #ifndef AWEAPON_HPP
 # define AWEAPON_HPP
 
+#include <iostream>
+
 class AWeapon {
 
 public:
@@ -17,12 +19,9 @@ public:
 protected:
 
   AWeapon( void );
-
-private:
-
   std::string _name;
-  int _damage;
   int _apCost;
+  int _damage;
 
 };
 

@@ -1,24 +1,36 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap( std::string const & name ) : _name(name) {
+FragTrap::FragTrap( std::string const & name ) : 
+  _name(name),
+  _type("FR4G-TP"), 
+  _HP(100), 
+  _maxHP(100), 
+  _EP(100),
+  _maxEP(100),
+  _level(1),
+  _meleeDmg(30),
+  _rangeDmg(20),
+  _armor(5) 
+{
   std::srand(std::time(0));
-
-  this->_HP = 100;
-  this->_maxHP = 100;
-  this->_EP = 100;
-  this->_maxEP = 100;
-  this->_level = 1;
-  this->_meleeDmg = 30;
-  this->_rangeDmg = 20;
-  this->_armor = 5;
-  this->_type = "FR4G-TP";
 
   this->announce();
   std::cout << " spawns." << std::endl;
   return ;
 }
 
-FragTrap::FragTrap( FragTrap const & src ) {
+FragTrap::FragTrap( FragTrap const & src ) : 
+  _name(src._name),
+  _type(src._type),
+  _HP(src._HP), 
+  _maxHP(src._maxHP), 
+  _EP(src._EP),
+  _maxEP(src._maxEP),
+  _level(src._level),
+  _meleeDmg(src._meleeDmg),
+  _rangeDmg(src._rangeDmg),
+  _armor(src._armor)
+{
   *this = src;
   return ;
 }

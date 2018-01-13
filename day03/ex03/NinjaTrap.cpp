@@ -1,7 +1,8 @@
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap( std::string const & name ) 
-  : ClapTrap(name, "N1NJ4-TP") {
+NinjaTrap::NinjaTrap( std::string const & name ) : 
+  ClapTrap(name, "N1NJ4-TP") 
+{
   std::srand(std::time(0));
 
   this->_HP = 60;
@@ -18,8 +19,19 @@ NinjaTrap::NinjaTrap( std::string const & name )
   return ;
 }
 
-NinjaTrap::NinjaTrap( NinjaTrap const & src ) 
-  : ClapTrap(src) {
+NinjaTrap::NinjaTrap( NinjaTrap const & src ) : 
+  ClapTrap(src) 
+{
+  this->_name = src._name;
+  this->_HP = src._HP;
+  this->_maxHP = src._maxHP;
+  this->_EP = src._EP;
+  this->_maxEP = src._maxEP;
+  this->_level = src._level;
+  this->_meleeDmg = src._meleeDmg;
+  this->_rangeDmg = src._rangeDmg;
+  this->_armor = src._armor;  
+  this->_type = src._type;
   *this = src;
   return ;
 }

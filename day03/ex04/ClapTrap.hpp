@@ -22,8 +22,9 @@ public:
   void announce( void ) const;
   int getHP( void ) const;
 
-public:
+protected:
 
+  ClapTrap( void );
   std::string _name;
   std::string _type;
   int _HP;
@@ -34,10 +35,6 @@ public:
   int _meleeDmg;
   int _rangeDmg;
   unsigned int _armor;
-
-private:
-
-  ClapTrap( void );
 
 };
 

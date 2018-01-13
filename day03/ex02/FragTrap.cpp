@@ -20,6 +20,16 @@ FragTrap::FragTrap( std::string const & name )
 
 FragTrap::FragTrap( FragTrap const & src ) 
   : ClapTrap(src) {
+  this->_name = src._name;
+  this->_HP = src._HP;
+  this->_maxHP = src._maxHP;
+  this->_EP = src._EP;
+  this->_maxEP = src._maxEP;
+  this->_level = src._level;
+  this->_meleeDmg = src._meleeDmg;
+  this->_rangeDmg = src._rangeDmg;
+  this->_armor = src._armor;  
+  this->_type = src._type;
   *this = src;
   return ;
 }

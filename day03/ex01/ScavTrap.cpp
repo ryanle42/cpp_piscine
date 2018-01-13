@@ -1,23 +1,36 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap( std::string name ) : _name(name) {
+ScavTrap::ScavTrap( std::string name ) : 
+  _name(name),
+  _type("SC4V-TP"), 
+  _HP(100), 
+  _maxHP(100), 
+  _EP(50),
+  _maxEP(50),
+  _level(1),
+  _meleeDmg(20),
+  _rangeDmg(15),
+  _armor(3) 
+{
   std::srand(std::time(0));
-  this->_HP = 100;
-  this->_maxHP = 100;
-  this->_EP = 50;
-  this->_maxEP = 50;
-  this->_level = 1;
-  this->_meleeDmg = 20;
-  this->_rangeDmg = 15;
-  this->_armor = 3;
-  this->_type = "SC4V-TP";
 
   this->announce();
   std::cout << " spawns." << std::endl;
   return ;
 }
 
-ScavTrap::ScavTrap( ScavTrap const & src ) {
+ScavTrap::ScavTrap( ScavTrap const & src ) : 
+  _name(src._name),
+  _type(src._type),
+  _HP(src._HP), 
+  _maxHP(src._maxHP), 
+  _EP(src._EP),
+  _maxEP(src._maxEP),
+  _level(src._level),
+  _meleeDmg(src._meleeDmg),
+  _rangeDmg(src._rangeDmg),
+  _armor(src._armor)
+{
   *this = src;
   return ;
 }

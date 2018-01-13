@@ -1,9 +1,10 @@
 #include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap( std::string const & name ) 
-  : ClapTrap(name),
+SuperTrap::SuperTrap( std::string const & name ) : 
+  ClapTrap(name),
   FragTrap(name),
-  NinjaTrap(name) {
+  NinjaTrap(name) 
+{
   std::srand(std::time(0));
 
   this->_HP = 100;
@@ -22,10 +23,21 @@ SuperTrap::SuperTrap( std::string const & name )
   return ;
 }
 
-SuperTrap::SuperTrap( SuperTrap const & src ) 
-  : ClapTrap(src), 
+SuperTrap::SuperTrap( SuperTrap const & src ) : 
+  ClapTrap(src), 
   FragTrap(src),
-  NinjaTrap(src) {
+  NinjaTrap(src) 
+{
+  this->_name = src._name;
+  this->_HP = src._HP;
+  this->_maxHP = src._maxHP;
+  this->_EP = src._EP;
+  this->_maxEP = src._maxEP;
+  this->_level = src._level;
+  this->_meleeDmg = src._meleeDmg;
+  this->_rangeDmg = src._rangeDmg;
+  this->_armor = src._armor;  
+  this->_type = src._type;
   *this = src;
   return ;
 }

@@ -1,7 +1,8 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap( std::string const & name ) 
-  : ClapTrap(name, "SC4V-TP") {
+ScavTrap::ScavTrap( std::string const & name ) : 
+  ClapTrap(name, "SC4V-TP") 
+{
   std::srand(std::time(0));
 
   this->_HP = 100;
@@ -18,8 +19,19 @@ ScavTrap::ScavTrap( std::string const & name )
   return ;
 }
 
-ScavTrap::ScavTrap( ScavTrap const & src )
-  : ClapTrap(src) {
+ScavTrap::ScavTrap( ScavTrap const & src ) : 
+  ClapTrap(src) 
+{
+  this->_name = src._name;
+  this->_HP = src._HP;
+  this->_maxHP = src._maxHP;
+  this->_EP = src._EP;
+  this->_maxEP = src._maxEP;
+  this->_level = src._level;
+  this->_meleeDmg = src._meleeDmg;
+  this->_rangeDmg = src._rangeDmg;
+  this->_armor = src._armor;  
+  this->_type = src._type;
   *this = src;
   return ;
 }

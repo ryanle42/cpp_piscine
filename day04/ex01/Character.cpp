@@ -9,9 +9,9 @@ Character::Character( std::string const & name ) :
 }
 
 Character::Character( Character const & src ) :
-  _name(name),
-  _weapon(src._weapon),
-  _ap(src._ap)
+  _name(src._name),
+  _ap(src._ap),
+  _weapon(src._weapon)
 {
   return ;
 }

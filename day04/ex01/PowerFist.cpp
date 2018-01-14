@@ -1,13 +1,14 @@
 #include "PowerFist.hpp"
 
-PowerFist::PowerFist( void ) 
-  : AWeapon("Power Fist", 8, 50) {
-    return ;
+PowerFist::PowerFist( void ) : 
+  AWeapon("Power Fist", 8, 50) 
+{
+  return ;
 }
 
-PowerFist::PowerFist( PowerFist const & src ) 
-  : AWeapon(src) {
-  *this = src;
+PowerFist::PowerFist( PowerFist const & src ) : 
+  AWeapon(src) 
+{
   return ;
 }
 

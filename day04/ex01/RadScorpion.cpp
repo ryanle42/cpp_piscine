@@ -1,15 +1,18 @@
 #include "RadScorpion.hpp"
 
-RadScorpion::RadScorpion( void ) 
-  : Enemy(80, "RadScorpion") {
+RadScorpion::RadScorpion( void ) : 
+  Enemy(80, "RadScorpion") 
+{
   std::cout << "* click click click *"
             << std::endl;
   return ;
 }
 
-RadScorpion::RadScorpion( RadScorpion const & src ) 
-  : Enemy(src) {
-  *this = src;
+RadScorpion::RadScorpion( RadScorpion const & src ) : 
+  Enemy(src) 
+{
+  std::cout << "* click click click *"
+            << std::endl;
   return ;
 }
 

@@ -3,7 +3,10 @@
 Sorcerer::Sorcerer( 
   std::string const & name, 
   std::string const & title 
-) : _name(name), _title(title) {
+) : 
+  _name(name), 
+  _title(title) 
+{
   std::cout << this->_name << ", " << this->_title
             << ", is born !"
             << std::endl;
@@ -14,8 +17,13 @@ Sorcerer::Sorcerer( void ) {
   return ;
 }
 
-Sorcerer::Sorcerer( Sorcerer const & src ) {
-  *this = src;
+Sorcerer::Sorcerer( Sorcerer const & src ) :
+  _name(src._name),
+  _title(src._title)
+{
+  std::cout << this->_name << ", " << this->_title
+          << ", is born !"
+          << std::endl;
   return ;
 }
 

@@ -1,7 +1,8 @@
 #include "Peon.hpp"
 
-Peon::Peon( std::string const & name ) 
-  : Victim(name) {
+Peon::Peon( std::string const & name ) : 
+  Victim(name) 
+{
   std::cout << "Zog zog."
             << std::endl;
   return ;
@@ -13,7 +14,9 @@ Peon::Peon( void ) {
 
 Peon::Peon( Peon const & src ) 
   : Victim(src) {
-  *this = src;
+  this->_name = src._name;
+  std::cout << "Zog zog."
+          << std::endl;
   return ;
 }
 

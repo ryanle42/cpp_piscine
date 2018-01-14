@@ -1,7 +1,8 @@
 #include "Victim.hpp"
 
-Victim::Victim( std::string const & name ) 
-  : _name(name) {
+Victim::Victim( std::string const & name ) : 
+  _name(name) 
+{
   std::cout << "Some random victim called "
             << this->_name << " just popped !"
             << std::endl;
@@ -12,8 +13,12 @@ Victim::Victim( void ) {
   return ;
 }
 
-Victim::Victim( Victim const & src ) {
-  *this = src;
+Victim::Victim( Victim const & src ) :
+  _name(src._name)
+{
+  std::cout << "Some random victim called "
+            << this->_name << " just popped !"
+            << std::endl;
   return ;
 }
 

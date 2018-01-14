@@ -7,7 +7,9 @@ AssaultTerminator::AssaultTerminator( void ) {
 }
 
 AssaultTerminator::AssaultTerminator( AssaultTerminator const & src ) {
-  *this = src;
+  (void)src;
+  std::cout << "* teleports from space *"
+            << std::endl;
   return ;
 }
 
@@ -18,6 +20,7 @@ AssaultTerminator::~AssaultTerminator( void ) {
 }
 
 AssaultTerminator & AssaultTerminator::operator=( AssaultTerminator const & rhs ) {
+  *this = rhs;
   return *this;
 }
 

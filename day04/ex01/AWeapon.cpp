@@ -1,12 +1,18 @@
 #include "AWeapon.hpp"
 
-AWeapon::AWeapon( std::string const & name, int apcost, int damage ) 
-  : _name(name), _apCost(apcost), _damage(damage) {
-    return ;
+AWeapon::AWeapon( std::string const & name, int apcost, int damage ) : 
+  _name(name), 
+  _apCost(apcost), 
+  _damage(damage) 
+{
+  return ;
 }
 
-AWeapon::AWeapon( AWeapon const & src ) {
-  *this = src;
+AWeapon::AWeapon( AWeapon const & src ) :
+  _name(src._name),
+  _apCost(src._apCost),
+  _damage(src._damage)
+{
   return ;
 }
 

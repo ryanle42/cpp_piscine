@@ -3,6 +3,7 @@
 
 #include "ISquad.hpp"
 #include "ISpaceMarine.hpp"
+#include <iostream>
 #include <cstddef>
 
 class Squad : public ISquad {

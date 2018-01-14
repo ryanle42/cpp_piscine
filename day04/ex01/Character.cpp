@@ -1,14 +1,18 @@
 #include "Character.hpp"
 
-Character::Character( std::string const & name ) 
-  : _name(name) {
+Character::Character( std::string const & name ) : 
+  _name(name) 
+{
   this->_weapon = NULL;
   this->_ap = 40;
   return ;
 }
 
-Character::Character( Character const & src ) {
-  *this = src;
+Character::Character( Character const & src ) :
+  _name(name),
+  _weapon(src._weapon),
+  _ap(src._ap)
+{
   return ;
 }
 

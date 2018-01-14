@@ -7,7 +7,9 @@ TacticalMarine::TacticalMarine( void ) {
 }
 
 TacticalMarine::TacticalMarine( TacticalMarine const & src ) {
-  *this = src;
+  (void)src;
+  std::cout << "Tactical Marine ready for battle"
+            << std::endl;
   return ;
 }
 
@@ -18,12 +20,12 @@ TacticalMarine::~TacticalMarine( void ) {
 }
 
 TacticalMarine & TacticalMarine::operator=( TacticalMarine const & rhs ) {
+  *this = rhs;
   return *this;
 }
 
 ISpaceMarine* TacticalMarine::clone( void ) const {
-  ISpaceMarine *copy = new TacticalMarine(*this);
-  return copy; 
+  return new TacticalMarine(*this);
 }
 
 void TacticalMarine::battleCry( void ) const {

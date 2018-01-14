@@ -4,23 +4,27 @@
 #include "ISquad.hpp"
 #include "ISpaceMarine.hpp"
 
-int main()
-{
+int main( void ) {
   ISpaceMarine* bob = new TacticalMarine;
   ISpaceMarine* jim = new AssaultTerminator;
-  Squad *asd = new Squad;
-  ISquad* vlc = new Squad(*asd);
-  // ISquad* squadCopy = new Squad(*asd);
+  bob = jim;
+  Squad *ogSquad = new Squad;
+  Squad *cp = new Squad;
   
-  vlc->push(bob);
-  vlc->push(jim);
-  for (int i = 0; i < vlc->getCount(); ++i)
-  {
-    ISpaceMarine* cur = vlc->getUnit(i);
-    cur->battleCry();
-    cur->rangedAttack();
-    cur->meleeAttack();
-  }
-  delete vlc;
-  return 0;
+  ogSquad->push(bob);
+  ogSquad->push(jim);
+  *cp = *ogSquad;
+  delete ogSquad;
+  cp->getUnit(0)->meleeAttack();
+
+  // copySquad->push(copySquad->getUnit(0));
+  // for (int i = 0; i < copySquad->getCount(); ++i)
+  // {
+  //   ISpaceMarine* cur = copySquad->getUnit(i);
+  //   cur->battleCry();
+  //   cur->rangedAttack();
+  //   cur->meleeAttack();
+  // }
+  // delete copySquad;
+  // return 0;
 }

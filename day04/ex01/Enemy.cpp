@@ -1,13 +1,17 @@
 #include "Enemy.hpp"
 
 
-Enemy::Enemy( int hp, std::string const & type ) 
-  : _hp(hp), _type(type) {
-    return ;
+Enemy::Enemy( int hp, std::string const & type ) : 
+  _hp(hp), 
+  _type(type) 
+{
+  return ;
 }
 
-Enemy::Enemy( Enemy const & src ) {
-  *this = src;
+Enemy::Enemy( Enemy const & src ) :
+  _hp(src._hp),
+  _type(src._type)
+{
   return ;
 }
 

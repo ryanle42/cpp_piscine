@@ -4,7 +4,6 @@ int main( void ) {
   Bureaucrat DonaldTrump("Donald", 150);
   Bureaucrat justRight("Just Right", 50);
 
-
   try {
     justRight.dropGrade();
     std::cout << justRight << std::endl;

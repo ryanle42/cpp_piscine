@@ -9,6 +9,31 @@ class Bureaucrat;
 
 class Form {
 
+public:
+
+  Form( std::string const & name, int signRequiredGrade, int executeRequiredGrade );
+  ~Form( void );
+  Form( Form const & src );
+  Form & operator=(Form const & rhs);
+  std::string  getName( void ) const;
+  int          getSignRequiredGrade( void ) const;
+  int          getExecuteRequiredGrade( void ) const;
+  bool         getIsSigned( void ) const;
+  void         beSigned( Bureaucrat const & src );
+  virtual void execute(Bureaucrat const & executor) const = 0;
+
+protected:
+
+  class FormNotSignedException : public std::exception {
+
+    public:
+
+      virtual const char * what() const throw() {
+        return "Form is not signed";
+      }
+
+  };
+
   class GradeTooHighException : public std::exception {
     
     public:
@@ -29,23 +54,11 @@ class Form {
 
   };
 
-public:
-
-  Form( std::string const & name, int gradeRequired );
-  ~Form( void );
-  Form( Form const & src );
-  Form & operator=(Form const & rhs);
-  std::string getName( void ) const;
-  int getGradeRequired( void ) const;
-  bool getIsSigned( void ) const;
-  void beSigned( Bureaucrat const & src );
-
-private:
-
   Form( void );
   std::string const _name;
-  int const _gradeRequired;
-  bool _isSigned;
+  int         const _signRequiredGrade;
+  int         const _executeRequiredGrade;
+  bool              _isSigned;
 
 };
 

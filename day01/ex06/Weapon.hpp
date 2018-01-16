@@ -6,6 +6,7 @@
 class Weapon {
 
 public:
+
   Weapon( std::string type );
   ~Weapon( void );
   void setType( std::string );
